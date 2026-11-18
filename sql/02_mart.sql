@@ -77,7 +77,7 @@ LEFT JOIN recent_sales r USING (Store_ID, Product_ID);
 SELECT
   (SELECT SUM(Units) FROM maven_toys.raw_sales)       AS raw_units,
   (SELECT SUM(units) FROM maven_toys.fct_daily_sales) AS mart_units;
---- raw_units = mart_units = 1,090,565 (no rows lost or duplicated)
+--- raw_units = mart_units = 1,090,565 (no units lost or duplicated)
 
 -- Stock status summary
 SELECT stock_status,
